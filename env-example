@@ -32,7 +32,7 @@ COMPOSE_PATH_SEPARATOR=:
 ### PHP Version ###########################################
 
 # Select a PHP version of the Workspace and PHP-FPM containers (Does not apply to HHVM). Accepted values: 7.2 - 7.1 - 7.0 - 5.6
-PHP_VERSION=7.2
+PHP_VERSION=7.1
 
 ### PHP Interpreter #######################################
 
@@ -47,7 +47,7 @@ DOCKER_HOST_IP=10.0.75.1
 ### Remote Interpreter ####################################
 
 # Choose a Remote Interpreter entry matching name. Default is `laradock`
-PHP_IDE_CONFIG=serverName=laradock
+PHP_IDE_CONFIG=serverName=bpjstk
 
 ### Windows Path ##########################################
 
@@ -72,7 +72,7 @@ DOCKER_SYNC_STRATEGY=native_osx
 
 WORKSPACE_COMPOSER_GLOBAL_INSTALL=true
 WORKSPACE_COMPOSER_REPO_PACKAGIST=
-WORKSPACE_INSTALL_NODE=true
+WORKSPACE_INSTALL_NODE=false
 WORKSPACE_NODE_VERSION=stable
 WORKSPACE_NPM_REGISTRY=
 WORKSPACE_INSTALL_YARN=true
@@ -166,10 +166,10 @@ APACHE_DOCUMENT_ROOT=/var/www/
 
 ### MYSQL #################################################
 
-MYSQL_VERSION=latest
-MYSQL_DATABASE=default
-MYSQL_USER=default
-MYSQL_PASSWORD=secret
+MYSQL_VERSION=5.7
+MYSQL_DATABASE=bpjstkdb
+MYSQL_USER=bpjstk
+MYSQL_PASSWORD=bpjstkDB
 MYSQL_PORT=3306
 MYSQL_ROOT_PASSWORD=root
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
