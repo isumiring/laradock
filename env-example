@@ -11,6 +11,7 @@ APP_CODE_PATH_HOST=../
 APP_CODE_PATH_CONTAINER=/var/www:cached
 
 # Choose storage path on your machine. For all storage systems
+# If You want a single project(s), you can set by your app-name (i.e web-app, you can set to ~/.laradock/web-app)
 DATA_PATH_HOST=~/.laradock/data
 
 ### Drivers ################################################
@@ -47,7 +48,7 @@ DOCKER_HOST_IP=10.0.75.1
 ### Remote Interpreter ####################################
 
 # Choose a Remote Interpreter entry matching name. Default is `laradock`
-PHP_IDE_CONFIG=serverName=bpjstk
+PHP_IDE_CONFIG=serverName=laradock
 
 ### Windows Path ##########################################
 
@@ -72,10 +73,10 @@ DOCKER_SYNC_STRATEGY=native_osx
 
 WORKSPACE_COMPOSER_GLOBAL_INSTALL=true
 WORKSPACE_COMPOSER_REPO_PACKAGIST=
-WORKSPACE_INSTALL_NODE=false
+WORKSPACE_INSTALL_NODE=true
 WORKSPACE_NODE_VERSION=stable
 WORKSPACE_NPM_REGISTRY=
-WORKSPACE_INSTALL_YARN=true
+WORKSPACE_INSTALL_YARN=false
 WORKSPACE_YARN_VERSION=latest
 WORKSPACE_INSTALL_PHPREDIS=true
 WORKSPACE_INSTALL_WORKSPACE_SSH=false
@@ -167,9 +168,9 @@ APACHE_DOCUMENT_ROOT=/var/www/
 ### MYSQL #################################################
 
 MYSQL_VERSION=5.7
-MYSQL_DATABASE=bpjstkdb
-MYSQL_USER=bpjstk
-MYSQL_PASSWORD=bpjstkDB
+MYSQL_DATABASE=laradockdb
+MYSQL_USER=laradock
+MYSQL_PASSWORD=laradockDB
 MYSQL_PORT=3306
 MYSQL_ROOT_PASSWORD=root
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
